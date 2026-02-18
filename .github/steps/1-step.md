@@ -1,28 +1,28 @@
-## Step 1: Create a workflow file
+## Step 1: Crea un file workflow
 
-### 📖 Theory: Introduction to workflows
+### 📖 Teoria: Introduzione ai workflow
 
-A **workflow** is an automated process that you define in your repository. Workflows are described in YAML files stored in the `.github/workflows` directory. Each workflow is triggered by specific [events](https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows) happening in your repository such as opening a pull request, pushing code, or creating an issue.
+Un **workflow** è un processo automatizzato che definisci nel tuo repository. I workflow sono descritti nei file YAML memorizzati nella directory `.github/workflows`. Ogni workflow è attivato da specifici [eventi](https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows) che accadono nel tuo repository come l'apertura di una pull request, il push del codice, o la creazione di una issue.
 
-Workflows let you automate tasks like building, testing, or deploying your code, and can respond to almost any activity in your project.
+I workflow ti permettono di automatizzare attività come la compilazione (build), il test, o il deployment del tuo codice, e possono rispondere a quasi tutte le attività nel tuo progetto.
 
 > [!NOTE]
-> If you want to learn more check out these resources:
-> - [Understanding GitHub Actions](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions)
-> - [Events that trigger workflows](https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows)
-> - [Actions runner pricing](https://docs.github.com/en/billing/reference/actions-runner-pricing)
+> Se vuoi saperne di più consulta queste risorse:
+> - [Capire GitHub Actions](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions)
+> - [Eventi che attivano i workflow](https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows)
+> - [Prezzi dei runner Actions](https://docs.github.com/en/billing/reference/actions-runner-pricing)
 
-### ⌨️ Activity: Create a workflow file
+### ⌨️ Attività: Crea un file workflow
 
-1. Open this repository in a new browser tab so you can work on the steps while you read the instructions in this tab.
+1. Apri questo repository in una nuova scheda del browser così puoi lavorare sugli step mentre leggi le istruzioni in questa scheda.
 
-1. In the **Code** tab of your repository, create a new branch named `welcome-workflow`.
+1. Nella scheda **Code** del tuo repository, crea un nuovo branch chiamato `welcome-workflow`.
 
    <img width="400" alt="create branch screenshot" src="https://github.com/IDT-25-27/idt-25-27-classroom-173794-hello-github-actions-hello-github-actions/blob/main/.github/images/create-branch-screenshot.png?raw=true" />
 
-1. In the `welcome-workflow` branch, navigate to the `.github/workflows` directory.
+1. Nel branch `welcome-workflow`, naviga nella directory `.github/workflows`.
 
-1. Create a new file named `welcome.yml` in the `.github/workflows` directory with the following content:
+1. Crea un nuovo file chiamato `welcome.yml` nella directory `.github/workflows` con il seguente contenuto:
 
    ```yaml
    name: Post welcome comment
@@ -34,16 +34,16 @@ Workflows let you automate tasks like building, testing, or deploying your code,
    ```
 
    > [!NOTE]
-   > This is an incomplete workflow file. It is normal if you receive an error message. One step at a time! 😎
+   > Questo è un file workflow incompleto. È normale se ricevi un messaggio di errore. Un passo alla volta! 😎
 
-1. Commit your changes directly to the `welcome-workflow` branch.
+1. Esegui il commit delle tue modifiche direttamente nel branch `welcome-workflow`.
 
-1. With your workflow file committed, Mona will check your work and prepare the next step in this exercise!
+1. Con il tuo file workflow committato, Octocat controllerà il tuo lavoro e preparerà il passaggio successivo in questo esercizio!
 
 <details>
-<summary>Having trouble? 🤷</summary><br/>
+<summary>Hai problemi? 🤷</summary><br/>
 
-- Make sure you are on the `welcome-workflow` branch when creating the workflow file.
-- Double-check the file path and YAML indentation.
+- Assicurati di essere nel branch `welcome-workflow` quando crei il file workflow.
+- Controlla due volte il percorso del file e l'indentazione YAML.
 
 </details>

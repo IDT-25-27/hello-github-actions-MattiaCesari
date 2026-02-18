@@ -1,21 +1,21 @@
-## Step 2: Add a job to your workflow file
+## Step 2: Aggiungi un job al tuo file workflow
 
-Nice work! :tada: You added a workflow file!
+Ottimo lavoro! :tada: Hai aggiunto un file workflow!
 
-### 📖 Theory: Introduction to jobs
+### 📖 Teoria: Introduzione ai job
 
-A [job](https://docs.github.com/en/actions/about-github-actions/understanding-github-actions#jobs) is a group of steps that run together on the same [runner](https://docs.github.com/en/actions/using-github-hosted-runners/using-github-hosted-runners/about-github-hosted-runners) within a workflow. Each job is defined under the `jobs` section and runs independently and in parallel by default.
+Un [job](https://docs.github.com/en/actions/about-github-actions/understanding-github-actions#jobs) è un gruppo di step che vengono eseguiti insieme sullo stesso [runner](https://docs.github.com/en/actions/using-github-hosted-runners/using-github-hosted-runners/about-github-hosted-runners) all'interno di un workflow. Ogni job è definito nella sezione `jobs` ed è eseguito in modo indipendente e in parallelo per impostazione predefinita.
 
-Jobs help you organize your workflow into logical units, such as building, testing, or deploying your code.
+I job ti aiutano a organizzare il tuo workflow in unità logiche, come la compilazione (building), il test o il deployment del tuo codice.
 
 > [!Tip]
-> You can define a job to run with multiple [variations using a matrix strategy](https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/running-variations-of-jobs-in-a-workflow).
+> Puoi definire un job da eseguire con più [variazioni usando una strategia a matrice](https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/running-variations-of-jobs-in-a-workflow).
 
-### ⌨️ Activity: Add a job to your workflow file
+### ⌨️ Attività: Aggiungi un job al tuo file workflow
 
-1. In the `welcome-workflow` branch, open your `.github/workflows/welcome.yml` file.
+1. Nel branch `welcome-workflow`, apri il tuo file `.github/workflows/welcome.yml`.
 
-1. Edit the file to add the `jobs` section and 1 job named `welcome`, which will run on the latest Ubuntu operating system.
+1. Modifica il file per aggiungere la sezione `jobs` e 1 job chiamato `welcome`, che verrà eseguito sull'ultimo sistema operativo Ubuntu.
 
    ```yaml
    name: Post welcome comment
@@ -30,14 +30,14 @@ Jobs help you organize your workflow into logical units, such as building, testi
        runs-on: ubuntu-latest
    ```
 
-1. Commit your changes to the `welcome-workflow` branch.
+1. Esegui il commit delle tue modifiche nel branch `welcome-workflow`.
 
-1. With the job information added, Mona will review your work and prepare the next step in this exercise!
+1. Con le informazioni sul job aggiunte, Octocat esaminerà il tuo lavoro e preparerà il passaggio successivo in questo esercizio!
 
 <details>
-<summary>Having trouble? 🤷</summary><br/>
+<summary>Hai problemi? 🤷</summary><br/>
 
-- Make sure the `jobs` section is properly indented in your YAML file.
-- Confirm you are editing the correct file and branch.
+- Assicurati che la sezione `jobs` sia correttamente indentata nel tuo file YAML.
+- Conferma di stare modificando il file e il branch corretti.
 
 </details>

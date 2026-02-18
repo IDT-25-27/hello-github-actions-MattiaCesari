@@ -1,32 +1,32 @@
-# Hello GitHub Actions
+# Ciao GitHub Actions
 
-_Create and run a GitHub Actions workflow._
+_Crea ed esegui un workflow GitHub Actions._
 
-## Welcome
+## Benvenuto
 
-Automation is key for repetitive tasks like testing, scanning, review, and deployment processes, and [GitHub Actions](https://docs.github.com/actions) is the best way to streamline that workflow.
+L'automazione è fondamentale per attività ripetitive come test, scansione, revisione e processi di deployment, e [GitHub Actions](https://docs.github.com/actions) è il modo migliore per snellire quel workflow.
 
-- **Who is this for**: Developers, DevOps engineers, Security engineers
-- **What you'll learn**: How to create GitHub Actions workflows, how to run them, and how to use them to automate tasks.
-- **What you'll build**: An Actions workflow that will comment on a pull request when it is created.
-- **Prerequisites**: [Introduction to GitHub](https://github.com/skills/introduction-to-github)
-- **How long**: This exercise can be finished in less than 30min.
+- **A chi è rivolto**: Studenti, Sviluppatori, Ingegneri DevOps, Ingegneri della Sicurezza
+- **Cosa imparerai**: Come creare workflow di GitHub Actions, come eseguirli e come usarli per automatizzare le attività.
+- **Cosa costruirai**: Un workflow Actions che commenterà una pull request quando viene creata.
+- **Prerequisiti**: [Introduzione a GitHub](https://github.com/skills/introduction-to-github)
+- **Quanto tempo**: Questo esercizio può essere completato in meno di 30 minuti.
 
-In this exercise, you will:
+In questo esercizio:
 
-1. Create a workflow file
-1. Add a job
-1. Add a run step
-1. See the workflow run
-1. Merge your pull request
+1. Creerai un file workflow
+1. Aggiungerai un job
+1. Aggiungerai uno step di esecuzione (run step)
+1. Vedrai il workflow in esecuzione
+1. Unirai (merge) la tua pull request
 
-### How to start this exercise
+### Come iniziare questo esercizio
 
-1.  Right-click **[Start Exercise](../../actions/workflows/0-start-exercise.yml)** and open it in a new tab.
-2.  Click the **Run workflow** button.
-3.  Select the `main` branch and click the green **Run workflow** button.
-4.  Wait about 20 seconds and refresh this page.
+1.  Fai clic con il tasto destro su **[Start Exercise](../../actions/workflows/0-start-exercise.yml)** e aprilo in una nuova scheda.
+2.  Clicca sul pulsante **Run workflow**.
+3.  Seleziona il branch `main` e clicca sul pulsante verde **Run workflow**.
+4.  Attendi circa 20 secondi e aggiorna questa pagina.
 
 ---
 
-&copy; 2025 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
+&copy; 2025 GitHub &bull; [Codice di Condotta](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [Licenza MIT](https://gh.io/mit)

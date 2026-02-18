@@ -26,6 +26,8 @@ jobs:
     needs: [find_exercise]
     env:
       ISSUE_URL: ${{ needs.find_exercise.outputs.issue-url }}
+      ISSUE_NUMBER: ${{ needs.find_exercise.outputs.issue-number }}
+      ISSUE_REPOSITORY: ${{ github.repository }}
 
     steps:
       - name: Checkout
@@ -84,35 +86,43 @@ jobs:
         with:
           text-file: .github/workflows/welcome.yml
           keyphrase: "pull-requests: write"
-
-      - name: Build message - step results
-        id: build-message-step-results
-        run: echo "updated-text=### Step Results<br>Automated checks completed." >> "$GITHUB_OUTPUT"
-
-      - name: Create comment - step results
-        run: |
-          gh issue comment "$ISSUE_URL" \
-            --body "$COMMENT_BODY" \
-            --edit-last
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          COMMENT_BODY: ${{ steps.build-message-step-results.outputs.updated-text }}
+      
+      - name: Update comment - step results
+        uses: GrantBirki/comment@v2.1.1
+        with:
+          repository: ${{ env.ISSUE_REPOSITORY }}
+          issue-number: ${{ env.ISSUE_NUMBER }}
+          comment-id: ${{ steps.find-last-comment.outputs.comment-id }}
+          edit-mode: replace
+          file: exercise-toolkit/markdown-templates/step-feedback/step-results-table.md
+          vars: |
+            step_number: 1
+            results_table:
+              - description: "Created welcome.yml file in .github/workflows directory"
+                passed: ${{ steps.check-file-exists.outcome == 'success' }}
+              - description: "Added a workflow name field"
+                passed: ${{ steps.check-workflow-name.outcome == 'success' }}
+              - description: "Configured pull_request event trigger"
+                passed: ${{ steps.check-pull-request-event.outcome == 'success' }}
+              - description: "Set types filter for pull_request event"
+                passed: ${{ steps.check-opened-type.outcome == 'success' }}
+              - description: "Added pull-requests: write permission"
+                passed: ${{ steps.check-permissions.outcome == 'success' }}
 
       - name: Fail job if not all checks passed
         if: contains(steps.*.outcome, 'failure')
         run: exit 1
 
-      - name: Build message - step finished
-        id: build-message-step-finish
-        run: echo "updated-text=### Step Finished<br>Proceeding to next step." >> "$GITHUB_OUTPUT"
-
       - name: Update comment - step finished
-        run: |
-          gh issue comment "$ISSUE_URL" \
-            --body "$ISSUE_BODY"
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          ISSUE_BODY: ${{ steps.build-message-step-finish.outputs.updated-text }}
+        uses: GrantBirki/comment@v2.1.1
+        with:
+          repository: ${{ env.ISSUE_REPOSITORY }}
+          issue-number: ${{ env.ISSUE_NUMBER }}
+          comment-id: ${{ steps.find-last-comment.outputs.comment-id }}
+          edit-mode: replace
+          file: exercise-toolkit/markdown-templates/step-feedback/step-finished-prepare-next-step.md
+          vars: |
+            next_step_number: "2"
 
   post_next_step_content:
     name: Post next step content

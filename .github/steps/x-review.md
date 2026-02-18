@@ -1,19 +1,19 @@
-## Finish
+## Finito
 
-_Congratulations friend, you've completed this exercise!_
+_Congratulazioni amico, hai completato questo esercizio!_
 
-<img src="https://octodex.github.com/images/jetpacktocat.png" alt="Mona the Octocat wearing a jetpack and smiling." width="300" align="right"/>
+<img src="https://octodex.github.com/images/jetpacktocat.png" alt="Octocat the Octocat wearing a jetpack and smiling." width="300" align="right"/>
 
-Here's a recap of all the tasks you've accomplished in your repository:
+Ecco un riepilogo di tutte le attività che hai completato nel tuo repository:
 
-1. You've created your first GitHub Actions workflow file.
-1. You learned where to make your workflow file.
-1. You defined an event trigger, a job, and a step for your workflow.
-1. You're ready to automate anything you can dream of.
+1. Hai creato il tuo primo file workflow di GitHub Actions.
+1. Hai imparato dove creare il tuo file workflow.
+1. Hai definito un trigger di evento, un job e uno step per il tuo workflow.
+1. Sei pronto ad automatizzare qualsiasi cosa tu possa sognare.
 
-### What's next?
+### Cosa succede dopo?
 
-- Take another exercise on [GitHub Learn](https://learn.github.com/skills)
-  - Take the [AI in Actions](https://github.com/skills/ai-in-actions) exercise to learn how to leverage AI models within your GitHub Actions workflows
-- [Learn more about GitHub Actions](https://docs.github.com/actions/)
+- Fai un altro esercizio su [GitHub Learn](https://learn.github.com/skills)
+  - Fai l'esercizio [AI in Actions](https://github.com/skills/ai-in-actions) per imparare a sfruttare i modelli AI all'interno dei tuoi workflow di GitHub Actions
+- [Saperne di più su GitHub Actions](https://docs.github.com/actions/)
 - [Awesome Actions](https://github.com/sdras/awesome-actions)
